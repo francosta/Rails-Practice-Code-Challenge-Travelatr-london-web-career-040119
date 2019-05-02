@@ -1,0 +1,7 @@
+<h1>Post#show</h1>
+
+<h2><%= @post.title %></h2>
+<h3>No. Likes: <%= @post.likes %></h3>
+<%= form_tag post_path(@post.id), method: @post.increase_like do %>
+ <%= submit_tag "Like #{@post.title}" %>
+<% end %>

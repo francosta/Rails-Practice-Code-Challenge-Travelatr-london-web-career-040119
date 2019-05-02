@@ -1,0 +1,14 @@
+<h1>Blogger Profile Page</h1>
+
+<%# <h3>Blogger's total no. of likes: <%= @blogger.posts.likes %> </h3>
+
+<h3>Blogger's Posts:</h3>
+
+<% @blogger.posts.each do |p| %>
+<li> <%= link_to p.title, p %> </li>
+<% end %>
+
+<h3>Blogger's TOP 5 Destinations:</h3>
+<% @blogger.top_5.each do |d|%>
+<li><%= d %></li>
+<% end %>
